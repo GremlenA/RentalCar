@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8A8A89;
+}
+
+/* Обёртка для кастомного выпадающего списка */
+.dropdownWrapper {
+  position: relative;
+  user-select: none;
+}
+
+/* Видимая часть списка (кнопка) */
+.control {
+  background-color: #F7F7FB;
+  padding: 14px 18px;
+  border-radius: 14px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Текст внутри списка ("Choose a price") */
+.currentValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #121417;
+  white-space: nowrap; /* СТРОГО В ОДНУ СТРОКУ, НИКАКИХ ПЕРЕНОСОВ */
+}
+
+/* Иконка стрелочки */
+.chevron {
+  min-width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23121417' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Поворот стрелочки при открытии */
+.chevronUp {
+  transform: rotate(180deg);
+}
+
+/* Само выпадающее меню с вариантами */
+.menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 272px;
+  background: #FFFFFF;
+  border: 1px solid rgba(18, 20, 23, 0.05);
+  box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.02);
+  border-radius: 14px;
+  padding: 14px 18px;
+  overflow-y: auto;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Варианты внутри меню */
+.option {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(18, 20, 23, 0.2);
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.option:hover, .optionActive {
+  color: #121417;
+}
+
+/* Кастомный тонкий скроллбар для меню */
+.menu::-webkit-scrollbar { 
+  width: 8px; 
+}
+.menu::-webkit-scrollbar-thumb {
+  background: rgba(18, 20, 23, 0.05);
+  border-radius: 10px;
+}
+
+/* Блок пробега (Inputs) */
+.mileageGroup {
+  display: flex;
+  background-color: #F7F7FB;
+  border-radius: 14px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prefix {
+  position: absolute;
+  left: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #121417;
+}
+
+.inputLeft, .inputRight {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #121417;
+  width: 160px;
+  height: 100%;
+}
+
+.inputLeft {
+  padding-left: 70px;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
+}
+
+.inputRight {
+  padding-left: 45px;
+}
+
+/* Убираем стрелочки у числовых полей */
+.inputLeft::-webkit-outer-spin-button,
+.inputLeft::-webkit-inner-spin-button,
+.inputRight::-webkit-outer-spin-button,
+.inputRight::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Кнопка Search */
+.searchBtn {
+  background-color: #3470FF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 44px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 48px;
+  transition: background-color 0.2s;
+}
+
+.searchBtn:hover {
+  background-color: #0B44CD;
+}

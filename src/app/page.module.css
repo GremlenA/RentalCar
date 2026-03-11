@@ -1,60 +1,31 @@
-.hero {
-  position: relative;
-  width: 100%;
-  /* Высота ровно как в Figma */
-  height: 700px; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Прижимаем к низу, чтобы отмерить 60px отступа снизу */
-  justify-content: flex-end; 
-  padding-bottom: 60px; /* Отступ снизу по макету */
-  overflow: hidden;
-  isolation: isolate;
+/* src/app/catalog/page.module.css */
+
+.container {
+  padding: 50px 0;
 }
 
-.bgImage {
-  z-index: -2;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 274px); /* Четыре колонки по 274px каждая */
+  gap: 50px 29px; /* Расстояние между строками и колонками */
+  margin-top: 50px;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(18, 20, 23, 0.4); 
-  z-index: -1;
+/* Стили кнопки Load more */
+.loadMoreBtn {
+  display: block;
+  margin: 50px auto 0; /* Центрирует кнопку и добавляет отступ сверху */
+  background: transparent;
+  border: none;
+  color: #3470FF;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: underline; /* Подчеркнутый текст */
+  cursor: pointer;
+  transition: color 0.2s; /* Плавный переход цвета текста при ховере */
 }
 
-.contentContainer {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  /* Ширина блока из Figma */
-  max-width: 783px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  /* Тот самый Gap (расстояние между текстом и кнопкой) из Auto Layout */
-  gap: 40px; 
-}
-
-.title {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.1;
-  color: #ffffff;
-}
-
-.subtitle {
-  font-weight: 400;
-  font-size: 20px;
-  color: #f2f4f7;
-  /* Убираем margin, так как теперь работает gap в родителе */
-  margin: 0; 
-  margin-top: -24px; /* Небольшая корректировка, так как в Figma заголовок и подзаголовок ближе друг к другу */
+/* Стили кнопки при наведении */
+.loadMoreBtn:hover {
+  color: #0B44CD;
 }

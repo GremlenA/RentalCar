@@ -1,0 +1,62 @@
+.page {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.filtersSection {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 274px);
+  column-gap: 29px;
+  row-gap: 50px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 100px;
+}
+
+.loadMore {
+  display: block;
+  margin: 50px auto 100px; /* Центрируем и задаем отступы сверху и снизу */
+  background-color: transparent; /* Прозрачный фон */
+  border: 1px solid #3470FF; /* Синяя рамка */
+  border-radius: 12px; /* Такое же скругление, как у Search */
+  padding: 14px 44px; /* Внутренние отступы, чтобы кнопка была объемной */
+  color: #121417; /* Темный цвет текста */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out; /* Плавная смена цвета рамки */
+  text-decoration: none; /* Убираем подчеркивание, если оно осталось */
+}
+
+/* Состояние при наведении (нижняя кнопка на твоем скрине) */
+.loadMore:hover {
+  border-color: #0B44CD; /* Темно-синяя рамка при ховере */
+}
+
+.loading, .empty {
+  text-align: center;
+  font-size: 18px;
+  margin: 40px 0;
+  color: #121417;
+}
+
+/* Адаптив: если экран меньше 1240px — 3 колонки */
+@media (max-width: 1240px) {
+  .list {
+    grid-template-columns: repeat(3, 274px);
+  }
+}
+
+/* Адаптив: если экран меньше 900px — 1 колонка */
+@media (max-width: 900px) {
+  .list {
+    grid-template-columns: repeat(1, 274px);
+  }
+}
