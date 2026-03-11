@@ -1,0 +1,49 @@
+/* Базовые стили для ВСЕХ кнопок */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98); /* Легкий эффект нажатия */
+}
+
+/* === ВАРИАНТЫ ЦВЕТА === */
+.primary {
+  background-color: #3470ff;
+  color: #ffffff;
+}
+.primary:hover {
+  background-color: #0b44cd;
+}
+
+.secondary {
+  /* Пример для других кнопок, если они будут белые/серые */
+  background-color: #f2f4f7;
+  color: #101828;
+}
+.secondary:hover {
+  background-color: #e4e7ec;
+}
+
+/* === РАЗМЕРЫ === */
+.large {
+  padding: 14px 44px;
+  font-size: 16px;
+}
+
+.medium {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.small {
+  padding: 8px 16px;
+  font-size: 12px;
+}
