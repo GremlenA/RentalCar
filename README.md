@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rental Car App 🚗
 
-## Getting Started
+A modern, responsive web application for browsing and booking rental cars. Built with React and Next.js, offering a seamless user experience with advanced filtering, dynamic routing, and persistent state management.
 
-First, run the development server:
+## 📋 Table of Contents
+- [Project Description](#project-description)
+- [Main Features](#main-features)
+- [Technologies Used](#technologies-used)
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 Project Description
+Rental Car is a frontend application designed to help users find their perfect rental vehicle. Users can view a catalog of cars, filter them based on their specific needs (brand, price, mileage), save their favorite cars for later, and view detailed information for each vehicle, including specifications, accessories, and rental conditions. The project includes a simulated booking process with an interactive date picker and beautiful toast notifications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Main Features
+* **Interactive Catalog:** Browse a dynamically loaded grid of rental cars.
+* **Advanced Filtering (Backend-ready):** Filter vehicles by brand, rental price, and mileage range.
+* **Favorites System:** Add cars to a favorites list. The state is persisted in `localStorage` using Zustand, so favorites are saved even after a page refresh.
+* **Detailed Car Pages:** Dynamic routing (`/catalog/[id]`) to view comprehensive details, features, and rental conditions of a specific car.
+* **Interactive Booking Form:** A fully controlled booking form featuring a custom, compact date picker (`react-datepicker`).
+* **Pagination (Load More):** Efficient data fetching with a "Load more" button to load subsequent pages of vehicles.
+* **Modern UI/UX:** Clean design matching Figma specifications, complete with loading spinners and custom SVG icons.
+* **User Notifications:** Stylish toast notifications (`react-hot-toast`) for successful booking actions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Technologies Used
+* **Framework:** Next.js (App Router) / React
+* **State Management:** Zustand (with `persist` middleware)
+* **Styling:** CSS Modules
+* **Data Fetching:** Axios
+* **Date Picker:** `react-datepicker`
+* **Notifications:** `react-hot-toast`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Installation Instructions
 
-## Learn More
+To get a local copy up and running, follow these simple steps.
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/rental-car-app.git](https://github.com/your-username/rental-car-app.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd rental-car-app
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Set up environment variables:**
+    * Create a `.env.local` file in the root directory.
+    * Add your API URL (example):
+        ```env
+        NEXT_PUBLIC_API_URL=[https://your-mock-api-url.com](https://your-mock-api-url.com)
+        ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💻 Usage Instructions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+2.  **Open the application:**
+    Open your browser and navigate to `http://localhost:3000`.
+3.  **Navigate the App:**
+    * Click **"View Catalog"** on the Home page to start browsing.
+    * Use the dropdowns and inputs at the top of the Catalog page to **filter** the cars. Click "Search" to apply.
+    * Click the **Heart icon** on any car card to add it to your Favorites.
+    * Click **"Read more"** to view a car's details and access the booking form.
+    * Fill out the booking form, select a date, and click **"Send"** to see the success notification.
