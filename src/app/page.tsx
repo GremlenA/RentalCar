@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Container from "@/components/Container/Container";
 import Button from "@/components/ui/Button";
-import css from "./page.module.css"; // Проверь это имя!
+import css from "./page.module.css"; 
 
 export default function Home() {
   return (

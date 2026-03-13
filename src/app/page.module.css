@@ -1,31 +1,48 @@
-/* src/app/catalog/page.module.css */
 
-.container {
-  padding: 50px 0;
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 73px); 
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #121417; 
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 274px); /* Четыре колонки по 274px каждая */
-  gap: 50px 29px; /* Расстояние между строками и колонками */
-  margin-top: 50px;
+.bgImage {
+  z-index: 1;
 }
 
-/* Стили кнопки Load more */
-.loadMoreBtn {
-  display: block;
-  margin: 50px auto 0; /* Центрирует кнопку и добавляет отступ сверху */
-  background: transparent;
-  border: none;
-  color: #3470FF;
-  font-weight: 500;
-  font-size: 16px;
-  text-decoration: underline; /* Подчеркнутый текст */
-  cursor: pointer;
-  transition: color 0.2s; /* Плавный переход цвета текста при ховере */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 20, 23, 0.5);
+  z-index: 2; 
 }
 
-/* Стили кнопки при наведении */
-.loadMoreBtn:hover {
-  color: #0B44CD;
+.contentContainer {
+  position: relative;
+  z-index: 3; 
+}
+
+.content {
+  max-width: 600px;
+  color: #FFFFFF;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.8);
 }
