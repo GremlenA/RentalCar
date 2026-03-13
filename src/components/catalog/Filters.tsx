@@ -12,11 +12,11 @@ export default function Filters() {
   const [minMileage, setMinMileage] = useState('');
   const [maxMileage, setMaxMileage] = useState('');
 
-  // Состояния для открытия/закрытия списков
+
   const [isBrandOpen, setIsBrandOpen] = useState(false);
   const [isPriceOpen, setIsPriceOpen] = useState(false);
 
-  // Список цен для селектора
+
   const prices = [30, 40, 50, 60, 70, 80, 90, 100, 120, 150];
 
   useEffect(() => {
@@ -34,7 +34,6 @@ export default function Filters() {
 
   return (
     <div className={s.container}>
-      {/* 1. Блок бренда */}
       <div className={s.field}>
         <label className={s.label}>Car brand</label>
         <div className={s.dropdownWrapper} style={{ width: '224px' }}>
@@ -62,7 +61,7 @@ export default function Filters() {
         </div>
       </div>
 
-      {/* 2. Блок цены (Ширина точно по макету Figma - 196px) */}
+    
       <div className={s.field}>
         <label className={s.label}>Price/ 1 hour</label>
         <div className={s.dropdownWrapper} style={{ width: '196px' }}>

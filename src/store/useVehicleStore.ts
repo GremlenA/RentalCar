@@ -68,22 +68,22 @@ export const useVehicleStore = create<VehicleState>()(
       },
 
       fetchVehicles: async (searchFilters = {}, isNewSearch = false) => {
-        // Запобігаємо дублюванню запитів
+   
         if (get().isLoading) return;
         
-        // 1. ПОПЕРЕДНЄ СКИДАННЯ: Очищаємо результати ДО відправки запиту
+
         if (isNewSearch) {
           set({ 
             isLoading: true, 
-            vehicles: [], // Скидаємо масив машин миттєво
-            page: 1,      // Повертаємось на першу сторінку
+            vehicles: [], 
+            page: 1,     
             filters: searchFilters 
           });
         } else {
           set({ isLoading: true });
         }
         
-        // Беремо актуальну сторінку зі стейту
+
         const pageToFetch = get().page;
 
         try {
@@ -97,9 +97,9 @@ export const useVehicleStore = create<VehicleState>()(
           const { cars, totalPages } = response.data;
 
           set((state) => ({
-            // Якщо це новий пошук — записуємо свіжі дані, якщо ні — додаємо до старих (Load more)
+       
             vehicles: isNewSearch ? cars : [...state.vehicles, ...cars],
-            page: pageToFetch + 1, // Готуємо наступну сторінку
+            page: pageToFetch + 1,
             totalPages: totalPages,
             hasMore: pageToFetch < totalPages,
             isLoading: false,
@@ -123,7 +123,7 @@ export const useVehicleStore = create<VehicleState>()(
     {
       name: 'vehicle-storage',
       storage: createJSONStorage(() => localStorage),
-      // Зберігаємо в LocalStorage тільки масив favorites (вибрані машини)
+      
       partialize: (state) => ({ favorites: state.favorites }),
     }
   )

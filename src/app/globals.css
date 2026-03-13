@@ -1,4 +1,4 @@
-/* src/app/globals.css */
+
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +16,6 @@ body {
   height: 100%;
   background-color: #ffffff;
   color: #101828;
-  /* Убираем любые ограничения, чтобы контент мог тянуться во всю ширину */
   overflow-x: hidden; 
 }
 

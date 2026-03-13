@@ -1,8 +1,7 @@
-/* src/components/CarCard/CarCard.module.css */
 
 .card {
   width: 274px;
-  height: 100%; /* ВАЖНО: Заставляем карточку тянуться на всю высоту ячейки */
+  height: 100%; 
   border-radius: 14px;
   overflow: hidden;
   position: relative;
@@ -19,7 +18,6 @@
   object-fit: cover;
 }
 
-/* Стили кнопки Favorite */
 .favoriteBtn {
   position: absolute;
   top: 14px;
@@ -33,23 +31,23 @@
 
 .favoriteBtn svg path {
   stroke: white;
-  transition: fill 0.2s, stroke 0.2s; /* Плавные переходы для сердечка */
+  transition: fill 0.2s, stroke 0.2s; 
 }
 
-/* Стили сердечка при наведении */
+
 .favoriteBtn:hover svg path {
   stroke: #3470FF;
 }
 
-/* Стили для активного (выбранного) сердечка */
+
 .favoriteBtn.active svg path {
   fill: #3470FF;
   stroke: #3470FF;
 }
 
 .info {
-  padding: 14px 0; /* Убрал боковые отступы, если они есть в глобальном контейнере, или оставь 14px */
-  flex-grow: 1; /* Позволяет блоку информации занимать все доступное пространство */
+  padding: 14px 0;
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
 }
@@ -63,14 +61,14 @@
   font-size: 16px;
 }
 
-/* МАГИЯ: Запрещаем перенос и добавляем троеточие для длинных названий */
+
 .title {
   margin: 0;
   color: #121417;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 215px; /* Чтобы название не наезжало на цену */
+  max-width: 215px; 
 }
 
 .price {
@@ -84,10 +82,10 @@
   gap: 4px 6px;
   color: rgba(18, 20, 23, 0.5);
   font-size: 12px;
-  margin-bottom: 28px; /* Отступ до кнопки снизу */
+  margin-bottom: 28px;
 }
 
-/* Вертикальные черточки между тегами деталей (Город | Страна) */
+
 .details span {
   display: inline-flex;
   align-items: center;
@@ -102,7 +100,7 @@
   margin-left: 6px;
 }
 
-/* Стили кнопки Read more */
+
 .readMoreBtn {
   background-color: #3470FF;
   color: white;
@@ -113,11 +111,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-top: auto; /* Прижимает кнопку к нижнему краю карточки */
+  margin-top: auto; 
   width: 100%;
 }
 
-/* Стили кнопки при наведении */
+*/
 .readMoreBtn:hover {
   background-color: #0B44CD;
 }

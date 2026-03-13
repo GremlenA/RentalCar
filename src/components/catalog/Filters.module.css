@@ -18,13 +18,13 @@
   color: #8A8A89;
 }
 
-/* Обёртка для кастомного выпадающего списка */
+
 .dropdownWrapper {
   position: relative;
   user-select: none;
 }
 
-/* Видимая часть списка (кнопка) */
+
 .control {
   background-color: #F7F7FB;
   padding: 14px 18px;
@@ -37,15 +37,15 @@
   box-sizing: border-box;
 }
 
-/* Текст внутри списка ("Choose a price") */
+
 .currentValue {
   font-size: 16px;
   font-weight: 500;
   color: #121417;
-  white-space: nowrap; /* СТРОГО В ОДНУ СТРОКУ, НИКАКИХ ПЕРЕНОСОВ */
+  white-space: nowrap; 
 }
 
-/* Иконка стрелочки */
+
 .chevron {
   min-width: 20px;
   height: 20px;
@@ -55,12 +55,12 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* Поворот стрелочки при открытии */
+
 .chevronUp {
   transform: rotate(180deg);
 }
 
-/* Само выпадающее меню с вариантами */
+
 .menu {
   position: absolute;
   top: calc(100% + 4px);
@@ -79,7 +79,7 @@
   box-sizing: border-box;
 }
 
-/* Варианты внутри меню */
+
 .option {
   font-size: 16px;
   line-height: 1.25;
@@ -93,7 +93,7 @@
   color: #121417;
 }
 
-/* Кастомный тонкий скроллбар для меню */
+
 .menu::-webkit-scrollbar { 
   width: 8px; 
 }
@@ -102,7 +102,7 @@
   border-radius: 10px;
 }
 
-/* Блок пробега (Inputs) */
+
 .mileageGroup {
   display: flex;
   background-color: #F7F7FB;
@@ -145,7 +145,7 @@
   padding-left: 45px;
 }
 
-/* Убираем стрелочки у числовых полей */
+
 .inputLeft::-webkit-outer-spin-button,
 .inputLeft::-webkit-inner-spin-button,
 .inputRight::-webkit-outer-spin-button,

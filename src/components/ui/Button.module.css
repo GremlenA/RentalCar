@@ -1,4 +1,4 @@
-/* Базовые стили для ВСЕХ кнопок */
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -11,10 +11,9 @@
 }
 
 .btn:active {
-  transform: scale(0.98); /* Легкий эффект нажатия */
+  transform: scale(0.98); 
 }
 
-/* === ВАРИАНТЫ ЦВЕТА === */
 .primary {
   background-color: #3470ff;
   color: #ffffff;
@@ -24,7 +23,7 @@
 }
 
 .secondary {
-  /* Пример для других кнопок, если они будут белые/серые */
+
   background-color: #f2f4f7;
   color: #101828;
 }
@@ -32,7 +31,7 @@
   background-color: #e4e7ec;
 }
 
-/* === РАЗМЕРЫ === */
+
 .large {
   padding: 14px 44px;
   font-size: 16px;

@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation';
 import axios from 'axios';
 import DatePicker from 'react-datepicker'; 
 import 'react-datepicker/dist/react-datepicker.css'; 
+import toast from 'react-hot-toast'; 
 import Container from '@/components/Container/Container';
 import Loader from '@/components/ui/Loader/Loader';
 import { Vehicle } from '@/store/useVehicleStore';
@@ -42,7 +43,10 @@ export default function CarDetailsPage() {
 
   const handleBooking = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Rental request submitted successfully! We will contact you shortly.');
+    
+    
+    toast.success('Rental request submitted successfully! We will contact you shortly.');
+    
     setFormData({ name: '', email: '', date: null, comment: '' });
   };
 

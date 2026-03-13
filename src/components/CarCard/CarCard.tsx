@@ -13,7 +13,7 @@ export default function CarCard({ car }: CarCardProps) {
   const { toggleFavorite, favorites } = useVehicleStore();
   const isFavorite = favorites.includes(car.id);
 
-  // Форматируем пробег: заменяем запятые на пробелы (например, 5 352)
+ 
   const formatMileage = (num: number) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
@@ -58,7 +58,7 @@ export default function CarCard({ car }: CarCardProps) {
           <p className={s.price}>${car.rentalPrice}</p>
         </div>
 
-        {/* Оставили только нужные данные для карточки */}
+       
         <div className={s.details}>
           <span>{city}</span>
           <span>{country}</span>
@@ -68,7 +68,7 @@ export default function CarCard({ car }: CarCardProps) {
         </div>
       </div>
 
-      {/* Если в Button передается className, используем его, либо оставляем style */}
+
       <Button href={`/catalog/${car.id}`} style={{ width: '100%', marginTop: 'auto' }}>
         Read more
       </Button>

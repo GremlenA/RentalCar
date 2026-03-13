@@ -22,22 +22,22 @@
 
 .loadMore {
   display: block;
-  margin: 50px auto 100px; /* Центрируем и задаем отступы сверху и снизу */
-  background-color: transparent; /* Прозрачный фон */
-  border: 1px solid #3470FF; /* Синяя рамка */
-  border-radius: 12px; /* Такое же скругление, как у Search */
-  padding: 14px 44px; /* Внутренние отступы, чтобы кнопка была объемной */
-  color: #121417; /* Темный цвет текста */
+  margin: 50px auto 100px; 
+  background-color: transparent;
+  border: 1px solid #3470FF; 
+  border-radius: 12px; 
+  padding: 14px 44px; 
+  color: #121417; 
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.2s ease-in-out; /* Плавная смена цвета рамки */
-  text-decoration: none; /* Убираем подчеркивание, если оно осталось */
+  transition: border-color 0.2s ease-in-out; 
+  text-decoration: none; 
 }
 
-/* Состояние при наведении (нижняя кнопка на твоем скрине) */
+
 .loadMore:hover {
-  border-color: #0B44CD; /* Темно-синяя рамка при ховере */
+  border-color: #0B44CD; 
 }
 
 .loading, .empty {
@@ -47,14 +47,14 @@
   color: #121417;
 }
 
-/* Адаптив: если экран меньше 1240px — 3 колонки */
+
 @media (max-width: 1240px) {
   .list {
     grid-template-columns: repeat(3, 274px);
   }
 }
 
-/* Адаптив: если экран меньше 900px — 1 колонка */
+
 @media (max-width: 900px) {
   .list {
     grid-template-columns: repeat(1, 274px);

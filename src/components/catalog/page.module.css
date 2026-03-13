@@ -9,7 +9,7 @@
 
 .list {
   display: grid;
-  /* 4 колонки по 274px или гибкие */
+
   grid-template-columns: repeat(4, 1fr);
   gap: 50px 29px;
   margin-bottom: 100px;
@@ -41,14 +41,14 @@
   color: #121417;
 }
 
-/* Адаптив для планшетов */
+
 @media (max-width: 1200px) {
   .list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Адаптив для мобильных */
+
 @media (max-width: 768px) {
   .list {
     grid-template-columns: repeat(1, 1fr);
